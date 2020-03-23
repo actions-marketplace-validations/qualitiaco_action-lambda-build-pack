@@ -24,7 +24,7 @@ inputs:
 
 runs:
     using: "docker"
-    image: "qualitiaco/lambda-build-pack"
+    image: "docker://qualitiaco/lambda-build-pack"
     args:
         - ${{ inputs.build-sh }}
         - ${{ inputs.src-path }}
