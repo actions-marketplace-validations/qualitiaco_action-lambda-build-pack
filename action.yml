@@ -1,0 +1,31 @@
+# action.yml
+name: "Lambda Bulder"
+description: "Build binary files on Lambda"
+
+inputs:
+    build-sh:
+        description: "Shell Scrpit to Build. Built binary files should be put under output/"
+        required: false
+        default: "build.sh"
+
+    src-path:
+        description: "Directory path of build.sh and its related files"
+        required: false
+        default: "src"
+
+    output-path:
+        description: "Directory path of the built binaries and their related libraries"
+        required: false
+        default: "output"
+
+# outputs:
+#     result:
+#         description: "Show the result of building"
+
+runs:
+    using: "docker"
+    image: "qualitiaco/lambda-build-pack"
+    args:
+        - ${{ inputs.build-sh }}
+        - ${{ inputs.src-path }}
+        - ${{ inputs.output-path }}
