@@ -1,6 +1,6 @@
 # action.yml
-name: "Lambda Bulder"
-description: "Build binary files on Lambda"
+name: "AWS Lambda Build and Pack"
+description: "Build binary files on Lambda and pack necessary libraries"
 
 inputs:
     build-sh:
