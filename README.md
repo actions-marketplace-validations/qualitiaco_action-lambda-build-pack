@@ -1,8 +1,11 @@
 # action-lambda-pack
 
-Build binary files and pack necessary libraries for Lambda
+Build binary files and pack necessary libraries for AWS Lambda
 
 ## What this can do
+
+Have you ever feel you would like to call linux commands on AWS Lambda?
+If so, this makes you happy.
 
 This will run a build.sh script to build, and check what kind of libraries the build binaries require.
 Finally this will put the binaries and minimum necessary libraries on lambda runtime.
@@ -64,3 +67,9 @@ Only what you have to do is to put the necessary binary files (or anything you n
 `-- src
     `-- build.sh
 ```
+
+## Samples
+
+Sample code is in
+
+    https://github.com/qualitiaco/action-lambda-build-pack-sample
